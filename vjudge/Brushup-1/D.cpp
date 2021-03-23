@@ -45,5 +45,43 @@ Constraints
  * **/
  
  
- 
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    ios:: sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
+    
+    
+    unsigned int a[3],b[3], alice = 0, bob = 0;
+    for(unsigned int i = 0; i <3; i++){
+		cin>> a[i];
+	}
+	for(unsigned int j = 0; j <3; j++){
+		cin>> b[j];
+	}
+	for(unsigned int i = 0; i <3; i++){
+		if(a[i] > b[i]){
+			alice++;
+			}
+		else if(a[i] < b[i]){
+			bob++;
+			}
+	}
+   
+	
+	cout << alice << ' '<< bob;
+	
+    
+    
+      
+    return 0;
+}
  
