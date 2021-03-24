@@ -41,7 +41,7 @@ int main() {
     
     
     long long int a[5];
-    int min = 0,max = 0;
+    long long int  min = 0,max = 0;
     
     for (int i = 0; i <5 ; i++){
 			cin >> a[i];
