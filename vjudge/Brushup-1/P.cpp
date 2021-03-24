@@ -11,7 +11,7 @@ Constraints
  * 
  * **/
  
- #include <cmath>
+#include <cmath>
 #include <cstdio>
 #include <vector>
 #include <iostream>
@@ -23,7 +23,7 @@ using namespace std;
 int main()
 
 {
-	int fact[21];
+	long long int fact[21];
 	 unsigned int n;
 	 cin >> n;
 	 

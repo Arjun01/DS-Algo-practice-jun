@@ -28,7 +28,7 @@ int main()
 	}
 	 
 	 
-	int total = 4950;
+	int total = 5050;
     for (int i = 0; i < 99; i++)
         total -= a[i];
 
