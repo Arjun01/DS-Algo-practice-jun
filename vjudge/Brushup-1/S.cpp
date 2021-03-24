@@ -1,6 +1,5 @@
-/**
- * Number of mulitples
- * Given a positive integer - N, print the number of multiples of 3, 5 between [1, N].
+/**Natural numbers sum
+ * Given a positive integer N, print the sum of 1st N natural numbers.
 
 Input Format
 
@@ -8,10 +7,10 @@ First and only line of input contains a positive integer - N.
 
 Constraints
 
-1 <= N <=1018
+1 <= N <= 104
  * **/
-
-
+ 
+ 
 #include <cmath>
 #include <cstdio>
 #include <vector>
@@ -27,14 +26,12 @@ int main() {
     
     
     
-    long long int n, count = 0;
+    long long int n, sum = 0;
     cin >> n;
 
-	count += n/5;
-	count += n/3;
-	count -= n/15;
+	sum = (n * (n +1)) / 2;
 	
-	cout << count << '\n';
+	cout << sum << '\n';
 	
 	
 	
