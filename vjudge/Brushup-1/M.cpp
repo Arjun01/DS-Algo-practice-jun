@@ -24,8 +24,9 @@ using namespace std;
 int main()
 
 {
-	  unsigned int a,b,pow = 1 ;
-	 cin >> a >> b ;
+	  unsigned int a,b;
+	  long long int pow = 1 ;
+	  cin >> a >> b ;
 	 
 	 
 	 while (b != 0){

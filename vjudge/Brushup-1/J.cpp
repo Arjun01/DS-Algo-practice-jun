@@ -24,15 +24,14 @@ using namespace std;
 int main()
 
 {
-	 long long int n ;
+	 string n ;
 	 cin >> n;
 	 long long int sum = 0 ;
 	
-	while (n > 0){
-		sum += n %10;
-		n /= 10;
-		}
-	
+	 for (int i = 0; i < n.length(); i++) {
+        sum = sum + n[i] - 48;
+    }
+            
 	cout << sum << '\n';
 	
     
