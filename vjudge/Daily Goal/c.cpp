@@ -23,7 +23,7 @@ int main()
 		}
 		gcd = a;
 		lcm = (x*y)/gcd;
-		cout << lcm << ' '<< gcd;
+		cout << lcm << ' '<< gcd << '\n';
 		
 	}
  
