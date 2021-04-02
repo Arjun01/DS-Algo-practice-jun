@@ -17,7 +17,7 @@ int main()
 		cin>> n;
 		cout << "Case #"<< i << ':'<< '\n';
 		printPattern(n);
-		cout << '\n';
+		
 	}
 	return 0;
 
@@ -29,10 +29,10 @@ void printPattern(int n)
     for (i = 1; i <= (n/2)+1; i++) 
     {
         // Print spaces
-        for (j = i; j < n; j++) {
+        for (j = i; j < (n/2)+1; j++) {
             cout << " ";
         }
-        // Print #
+        // Print *
         while (k != (2 * i - 1)) {
             if (k == 0 || k == 2 * i - 2)
                 cout << "*";
@@ -42,16 +42,16 @@ void printPattern(int n)
             ;
         }
         k = 0;
-        cout << endl; // print next row
+        cout << "\n"; // print next row
     }
     
      // Print lower triangle
     for (i = n/2; i >= 1; i--) {
         // Print spaces
-        for (j = 1; j <= n - i; j++) {
+        for (j = 0; j <= (n/2) - i; j++) {
             cout << " ";
         }
-        // Print #
+        // Print *
         k = 0;
         while (k != (2 * i - 1)) {
             if (k == 0 or k == 2 * i - 2)
@@ -60,6 +60,6 @@ void printPattern(int n)
                 cout << " ";
             k++;
         }
-        cout << endl;
+        cout << "\n";
     }
 }
