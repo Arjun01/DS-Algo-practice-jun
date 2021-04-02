@@ -4,37 +4,34 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-void printPattern(int);
+
+
+long long findTrailingZeros(long long n)
+{
+    long long count = 0;
+ 
+    for (long long i = 5; n / i >= 1; i *= 5)
+        count += n / i;
+ 
+    return count;
+}
+
+
+
 int main()
 {
 	ios:: sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int t;
+    long long t;
     cin >> t;
-    for(int k=1 ; k <= t; k++){
-		int rows,i ,j;
-		cin>> rows;
+    while(t--){
+		long long n;
+		cin>> n;
 		
-		cout << "Case #"<<k<< ':'<< '\n';
-		
-		for(i=1; i<=rows; i++)
-		{
-        /* Print spaces in decreasing order of row */
-        for(j=i; j<rows; j++)
-        {
-           cout<< " ";
-        }
-
-        /* Print star in increasing order or row */
-        for(j=1; j<=i; j++)
-        {
-           cout<<"*";
-        }
-
-        cout<<'\n';
+		cout<<findTrailingZeros(n)<< "\n";
 	}
-}
+
 	return 0;
 
 
