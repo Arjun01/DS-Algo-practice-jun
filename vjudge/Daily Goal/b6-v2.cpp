@@ -39,49 +39,50 @@ typedef  long long ll;
 typedef uint32_t ui;
 
 
-void solveFirst(ui n,ui i,ui type){
-	  if(type == 1){
-			if (n & (1 << (i - 1)))
-        cout << "ON" << "\n";
-		else
-        cout << "OFF" << "\n";
-		}
-	 else if(type == 2){
-		 ui sol = ((1 << i) | n);
-			//cout << sol;
-	}
-	else if(type == 3){
-		ui sol2 = (n & (~(1 << (i - 1))));
-			//cout << sol2;
-	}
-  }
-  
-void solveSecond(ui n,ui p,ui q,ui type){
-		n ^= 1 << p;
-		n ^= 1 << q;
-		//cout << n;
-  }
 
 int main(){
 		ui t;
 		cin>> t;
 		while(t--){
-			ui x,Q;
-			cin>>x >> Q;
+			ui n,Q;
+			cin>>n >> Q;
 			for(ui j =0 ; j < Q; j++){
 				ui type;
 				cin >> type;
-				if(type ==1 || type == 2 || type == 3){
-					ui i;
+				ui i;
+				ui p,q;
+				if(type ==1 ){
+					
 					cin >> i;
-					solveFirst(x,i,type);
+					i = i-1;
+					if ((n & (1LL << i)) !=0)
+					cout << "ON" << "\n";
+					else
+					cout << "OFF" << "\n";
+				}
+				else if( type == 2){
+					cin >> i;
+					i = i-1;
+					n = ((1LL << i) | n);
+				}
+				else if (type ==3 ){
+					cin >> i;
+					i = i-1;
+					n = (n & (~(1 << i)));
 				}
 				else if(type == 4){
-					ui p,q;
+					
 					cin >> p >> q;
-					solveSecond(x,p,q,type);
+					p = p-1;
+					q = q-1;
+					
+					 if (((n & (1LL << p)) >> p) ^ ((n & (1LL << q)) >> q)){
+					   n ^= (1 << p);
+                       n ^= (1 << q);
+						}
+					
 					}
-					//cout << '\n';
+					
 			}
 			
 			
